@@ -1,0 +1,19 @@
+import math
+print('Enter the numbers with comma separation')
+n=input("enter the numbers: ")
+list1=n.split(',')
+for h in range(len(list1)):
+    list1[h]=int(list1[h])
+    s=5*list1[h]**2+4
+    p=math.sqrt(s)
+    p=round(p)
+    psqrt=p*p
+    q=5*list1[h]**2-4
+    q=abs(q)
+    t=math.sqrt(q)
+    t=round(t)
+    qsqrt=t*t
+    if (s==psqrt or q==qsqrt):
+        print(list1[h],"valid")
+    else:
+        print(list1[h],"invalid")
